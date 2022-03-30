@@ -5,6 +5,11 @@ const config: PlaywrightTestConfig = {
   testDir: "./tests",
   use: {
     headless: false,
+    launchOptions: {
+      firefoxUserPrefs: {
+        "pdfjs.disabled": false,
+      },
+    },
   },
   projects: [
     {
